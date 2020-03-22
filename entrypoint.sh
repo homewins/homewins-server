@@ -12,8 +12,6 @@ if [ "$TYPE" = 'worker' ]; then
     echo "Run gunicorn..."
     gunicorn --bind 0.0.0.0:8800 newsbox.wsgi:application --access-logfile -
 elif [ "$TYPE" = 'master' ]; then
-    env | sed "s/\([^=]*\)=\(.*\)/export\ \1='\2'/" > envs.sh
-
     echo "Render nginx.conf..."
     envsubst '\$HOMEWINS_API_WORKER_HOST' < nginx.conf.template > nginx.conf
 
