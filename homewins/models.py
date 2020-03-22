@@ -7,6 +7,8 @@ class Profile(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     score = models.PositiveIntegerField()
+    ssid = models.CharField(max_length=100)
+    latlong = models.CharField(max_length=100)
 
     class Meta:
         ordering = ['created']
