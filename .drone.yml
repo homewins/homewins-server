@@ -34,7 +34,7 @@ steps:
   image: quving/drone-rancher-cicd:latest
   settings:
     stamp: ${DRONE_COMMIT}
-    kubernetes_deployment: newsbox-api-master,newsbox-api-worker
+    kubernetes_deployment: homewins-api
     kubernetes_namespace: apps
     rancher_url:
       from_secret: rancher_url
