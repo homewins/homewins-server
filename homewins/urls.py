@@ -5,7 +5,7 @@ from rest_framework.routers import DefaultRouter
 from homewins import views
 
 router = DefaultRouter()
-router.register(r'homewins', views.ProfileViewSet)
+router.register(r'homewins/profile', views.ProfileViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
