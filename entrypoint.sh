@@ -10,7 +10,7 @@ python manage.py collectstatic --clear --noinput
 if [ "$TYPE" = 'worker' ]; then
 
     echo "Run gunicorn..."
-    gunicorn --bind 0.0.0.0:8800 newsbox.wsgi:application --access-logfile -
+    gunicorn --bind 0.0.0.0:8800 server.wsgi:application --access-logfile -
 elif [ "$TYPE" = 'master' ]; then
     echo "Render nginx.conf..."
     envsubst '\$HOMEWINS_API_WORKER_HOST' < nginx.conf.template > nginx.conf
