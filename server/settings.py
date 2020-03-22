@@ -47,8 +47,13 @@ INSTALLED_APPS = [
 # External apps
 INSTALLED_APPS += [
     'django.contrib.sites',
-    'corsheaders',
+    'allauth',
+    'allauth.socialaccount',
+    'allauth.account',
+    'rest_auth.registration',
     'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
     'drf_yasg',
     'django_filters',
 ]
@@ -204,6 +209,8 @@ SWAGGER_SETTINGS = {
 REDOC_SETTINGS = {
     'LAZY_RENDERING': False,
 }
+# Mailserver settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # SSL Settings
 USE_X_FORWARDED_HOST = True
