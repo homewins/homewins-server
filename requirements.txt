@@ -4,6 +4,7 @@ chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
 Django==3.0.4
+django-cors-headers==3.2.1
 django-filter==2.2.0
 django-restframework==0.0.1
 djangorestframework==3.11.0
@@ -14,6 +15,7 @@ itypes==1.1.0
 Jinja2==2.11.1
 MarkupSafe==1.1.1
 packaging==20.3
+psycopg2-binary==2.8.4
 pyparsing==2.4.6
 pytz==2019.3
 requests==2.23.0
